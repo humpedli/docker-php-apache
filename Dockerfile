@@ -25,7 +25,7 @@ RUN docker-php-ext-install -j$(nproc) iconv
 RUN docker-php-ext-install -j$(nproc) mcrypt
 
 # enable imagick
-RUN docker-php-ext-install -j$(nproc) imagick
+RUN docker-php-ext-enable imagick
 
 # enable mbstring
 RUN docker-php-ext-install -j$(nproc) mbstring
