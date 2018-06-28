@@ -30,5 +30,5 @@ RUN docker-php-ext-install zip
 RUN echo 'LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\" %{X-Forwarded-For}i" combined-proxy' >>  /etc/apache2/apache2.conf 
 
 # add docker user and group
-groupadd -g 999 docker
-useradd -u 111 -g 999 -d /dev/null -s /usr/sbin/nologin docker
+RUN groupadd -g 999 docker
+RUN useradd -u 111 -g 999 -d /dev/null -s /usr/sbin/nologin docker
