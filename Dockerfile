@@ -1,4 +1,4 @@
-FROM php:5.6-apache
+FROM php:5-apache
 
 # install gd and imagick mcrypt system requirements
 RUN apt-get update -y && \
@@ -6,7 +6,7 @@ RUN apt-get update -y && \
     apt-get install -y --no-install-recommends libmagickwand-dev && \
     apt-get install -y libmcrypt-dev && \
 	apt-get install -y libpng-dev zlib1g-dev     
-RUN pecl install imagick-3.4.1
+RUN pecl install imagick-3.4.3
 
 # enable standart modules, like: rewrite, headers, expires
 RUN a2enmod rewrite headers expires
